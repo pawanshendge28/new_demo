@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+names = ["Kunal", "Akash", "Ram"]
+
+# Iterate through each name and ensure it's only created if it doesn't exist
+names.each do |name|
+  User.find_or_create_by(name: name)
+end
